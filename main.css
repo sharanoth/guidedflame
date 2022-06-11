@@ -3,24 +3,88 @@
 	src: url(fonts/CinzelVariable.ttf);
 }
 
+@font-face {
+	font-family: Fredoka;
+	src: url(fonts/FredokaOne-Regular.ttf);
+}
+
+@font-face {
+	font-family: Zen_JP;
+	src: url(fonts/ZenAntique-Regular.ttf);
+}
+
+@font-face {
+	font-family: DarkSouls;
+	src: url(fonts/OptimusPrinceps.ttf);
+}
+
+@font-face {
+	font-family: DarkSoulsSB;
+	src: url(fonts/OptimusPrincepsSemiBold.ttf);
+}
+
+.maindivbg {
+	background: url(https://steamuserimages-a.akamaihd.net/ugc/1761446532953187247/B713E72A4007E29A1D2B53919716E2BA9BF237BD/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true)
+		no-repeat;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	background-position: bottom;
+	background-position-x: center;
+	opacity: 0.31;
+	transition: opacity 0.5s ease-in, filter 0.5s ease-in;
+	filter: blur(1.5px);
+	background-size: 420px;
+}
+
 .maindiv {
 	visibility: collapse;
+	width: 0;
 	opacity: 0;
+	margin: 0 auto;
+	display: flex;
+
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
 	transition: opacity 0.5s;
+	font-weight: bold;
+}
+
+.maindiv label {
+	font-size: 2.4em;
+	padding-bottom: 12px;
+	font-family: DarkSouls;
+	color: rgb(194, 194, 194);
+	transition: color 0.3s, filter 0.3s linear;
+}
+
+.maindiv label:hover {
+	font-size: 2.4em;
+	padding-bottom: 12px;
+	font-family: DarkSouls;
+	color: white;
+	filter: drop-shadow(0px 0px 3px whitesmoke);
 }
 
 body {
-	color: rgba(255, 255, 255, 0.9);
-	display: flex;
+	color: rgba(255, 255, 255, 1);
 	background-color: black;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
+	height: fit-content;
 	margin: 0;
 	padding: 0;
+
+	overflow: hidden;
 }
 
 .landingdiv {
+	position: absolute;
+	width: fit-content;
+	margin: 0 auto;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 	transition: opacity 0.5s;
 	z-index: 100;
 }
@@ -28,13 +92,38 @@ body {
 .landing {
 	text-align: center;
 	font-family: Cinzel;
-	color: rgba(180, 180, 180, 0.8);
+	display: block;
+	color: rgba(180, 180, 180, 0.9);
 	text-shadow: 0px 0px 4px white;
-	font-size: 1.5em;
+	font-size: 1.6em;
 	transition: font-size 0.5s, color 0.15s linear;
 }
 
-.landing:hover {
+.landingjp {
+	text-align: center;
+	display: block;
+	color: rgba(150, 150, 150, 1);
+	text-shadow: 0px 0px 3px whitesmoke;
+	font-size: 1.3em;
+	transition: font-size 0.5s, color 0.15s linear;
+	font-family: Zen_JP;
+}
+
+.landingdiv:hover .landingjp {
 	color: rgba(255, 255, 255, 0.9);
-	font-size: 1.55em;
+	font-size: 1.33em;
+}
+
+.landingdiv:hover .landing {
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 1.63em;
+}
+
+.backgroundimg {
+	z-index: -11;
+
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: auto;
 }
