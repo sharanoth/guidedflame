@@ -32,6 +32,6 @@ function sexyfunction() {
 			maindivbg.style.visibility = "visible";
 			maindivbg.style.opacity = 1;
 			maindivbg.style.filter = "blur(0px)";
-		}, 500);
+		}, 800);
 	}
 }
