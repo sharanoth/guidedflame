@@ -62,6 +62,22 @@ function navigation() {
 			closebutton.style.visibility = "collapse";
 		}, 500);
 	}
+	if (location.hash == "#contact") {
+		for (let index = 0; index < mainmenu.length; index++) {
+			mainmenu[index].style.opacity = "0";
+		}
+
+		contact.style.visibility = "visible";
+		closebutton.style.visibility = "visible";
+		setTimeout(() => {
+			for (let index = 0; index < mainmenu.length; index++) {
+				mainmenu[index].style.visibility = "collapse";
+			}
+			closebutton.style.opacity = "1";
+			contact.style.opacity = "1";
+			maindiv.style.display = "none";
+		}, 500);
+	}
 
 	if (location.hash == "#aboutme") {
 		for (let index = 0; index < mainmenu.length; index++) {
@@ -78,25 +94,6 @@ function navigation() {
 			bio.style.opacity = "1";
 			maindiv.style.display = "none";
 		}, 500);
-	}
-
-	if (location.hash == "#contact") {
-		for (let index = 0; index < mainmenu.length; index++) {
-			mainmenu[index].style.opacity = "0";
-		}
-		contact.style.visibility = "visible";
-		closebutton.style.visibility = "visible";
-		setTimeout(() => {
-			for (let index = 0; index < mainmenu.length; index++) {
-				mainmenu[index].style.visibility = "collapse";
-			}
-			closebutton.style.opacity = "1";
-			contact.style.opacity = "1";
-			maindiv.style.display = "none";
-		}, 500);
-	}
-
-	if (location.hash == "#coldness") {
 	}
 }
 

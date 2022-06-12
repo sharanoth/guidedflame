@@ -43,6 +43,13 @@
 	visibility: collapse;
 	transition: opacity 0.5s ease-in;
 }
+.bio ul {
+	display: flex;
+	flex-direction: column;
+	font-family: Cinzel;
+	color: white;
+	text-align: left !important;
+}
 
 .bio div {
 	display: flex;
@@ -56,18 +63,12 @@
 	max-width: 500px;
 }
 
-.bio ul {
-	font-family: Cinzel;
-	color: white;
-	text-align: left !important;
-}
-
 .maindivbg {
 	background-color: transparent;
 	background: url(https://steamuserimages-a.akamaihd.net/ugc/1761446532953187247/B713E72A4007E29A1D2B53919716E2BA9BF237BD/)
 		no-repeat;
 	position: absolute;
-	height: 100%;
+	height: calc(100% - 20px);
 	width: 100vw;
 	background-position: bottom;
 	background-position-x: center;
@@ -87,10 +88,11 @@
 	opacity: 0;
 	margin: 0 auto;
 	display: flex;
+	position: absolute;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
+	height: calc(100%);
 	transition: opacity 0.5s ease-in;
 }
 
@@ -141,7 +143,6 @@ body {
 	margin: 0;
 	padding: 0;
 	transition: background-color 0.5s ease-in;
-	overflow: hidden;
 }
 
 .landingdiv {
