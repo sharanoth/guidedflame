@@ -47,6 +47,7 @@ function navigation() {
 		bio.style.opacity = "0";
 		contact.style.opacity = "0";
 		closebutton.style.opacity = "0";
+		maindiv.style.display = "flex";
 
 		for (let index = 0; index < mainmenu.length; index++) {
 			setTimeout(() => {
@@ -74,7 +75,8 @@ function navigation() {
 				mainmenu[index].style.visibility = "collapse";
 			}
 			closebutton.style.opacity = "1";
-			bio.style.opacity = 1;
+			bio.style.opacity = "1";
+			maindiv.style.display = "none";
 		}, 500);
 	}
 
@@ -89,7 +91,8 @@ function navigation() {
 				mainmenu[index].style.visibility = "collapse";
 			}
 			closebutton.style.opacity = "1";
-			contact.style.opacity = 1;
+			contact.style.opacity = "1";
+			maindiv.style.display = "none";
 		}, 500);
 	}
 
