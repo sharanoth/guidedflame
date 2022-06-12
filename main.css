@@ -23,17 +23,48 @@
 	src: url(fonts/OptimusPrincepsSemiBold.ttf);
 }
 
-.bio {
-	display: none;
+* a {
+	-webkit-tap-highlight-color: transparent !important;
 }
 
-.bio p {
-	font-family: DarkSoulsSB;
+.bio {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+	max-width: 500px;
+	padding-left: 24px;
+	padding-right: 24px;
+	left: 50%;
+	top: 50%;
+	right: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	visibility: collapse;
+	transition: opacity 0.5s ease-in;
+}
+
+.bio div {
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	font-family: Cinzel;
 	color: white;
 }
 
+.bio p {
+	max-width: 500px;
+}
+
+.bio ul {
+	font-family: Cinzel;
+	color: white;
+	text-align: left !important;
+}
+
 .maindivbg {
-	background: url(https://steamuserimages-a.akamaihd.net/ugc/1761446532953187247/B713E72A4007E29A1D2B53919716E2BA9BF237BD/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true)
+	background-color: transparent;
+	background: url(https://steamuserimages-a.akamaihd.net/ugc/1761446532953187247/B713E72A4007E29A1D2B53919716E2BA9BF237BD/)
 		no-repeat;
 	position: absolute;
 	height: 100vh;
@@ -43,11 +74,13 @@
 	opacity: 0.31;
 	transition: opacity 0.5s ease-in, filter 0.5s ease-in;
 	filter: blur(1.5px);
-	background-size: 420px;
+	background-size: 164px;
 	z-index: -100;
 }
 
 .maindiv {
+	padding-left: 24px;
+	padding-right: 24px;
 	z-index: 15;
 	visibility: collapse;
 	width: 0;
@@ -59,12 +92,13 @@
 	justify-content: center;
 	height: 100vh;
 	transition: opacity 0.5s ease-in;
-	font-weight: bold;
 }
 
 .maindiv a {
+	font-weight: bold;
+	text-align: center;
 	font-size: 2.4em;
-	padding-bottom: 12px;
+	padding-bottom: 16px;
 	font-family: DarkSouls;
 	color: rgb(194, 194, 194);
 	text-decoration: none;
@@ -73,11 +107,25 @@
 	-moz-user-select: none;
 }
 
-.maindiv .bio {
-	transition: opacity 0.5s ease-in !important;
-}
 .closebutton {
-	left: 50%;
+	visibility: collapse;
+	position: absolute !important;
+	left: 24px !important;
+	top: 24px;
+	transition: color 0.3s, filter 0.3s linear, opacity 0.5s ease-in;
+	font-size: 2.4em;
+	font-weight: bold;
+	font-family: DarkSouls;
+	color: rgb(194, 194, 194);
+	user-select: none;
+	-moz-user-select: none;
+	text-decoration: none;
+}
+
+.closebutton:hover {
+	font-family: DarkSouls;
+	color: white;
+	filter: drop-shadow(0px 0px 3px whitesmoke);
 }
 
 .maindiv a:hover {
@@ -92,14 +140,13 @@ body {
 	height: fit-content;
 	margin: 0;
 	padding: 0;
-
+	transition: background-color 0.5s ease-in;
 	overflow: hidden;
 }
 
 .landingdiv {
 	position: absolute;
 	width: fit-content;
-	margin: 0 auto;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);

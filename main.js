@@ -30,51 +30,70 @@ function sexyfunction() {
 		maindiv.style.opacity = 1;
 		maindiv.style.width = "fit-content";
 
-		maindivbg.style.width = "100vw";
-		maindivbg.style.visibility = "visible";
 		maindivbg.style.opacity = 1;
 		maindivbg.style.filter = "blur(0px)";
 	}, 800);
 }
 
 function navigation() {
+	var closebutton = document.getElementById("closebutton");
 	var maindiv = document.getElementById("maindiv");
 	var bio = document.getElementById("bio");
-	var bioflex = document.getElementById("bioflex");
+	var contact = document.getElementById("contact");
 	var mainmenu = document.getElementsByClassName("menuelement");
+	var coldness = document.getElementById("coldness");
 
 	if (location.hash == "#main") {
-		for (let index = 0; index < mainmenu.length; index++) {
-			bio.style.opacity = "0";
-			mainmenu[index].style.opacity = "1";
-			mainmenu[index].style.visibility = "visible";
+		bio.style.opacity = "0";
+		contact.style.opacity = "0";
+		closebutton.style.opacity = "0";
 
+		for (let index = 0; index < mainmenu.length; index++) {
 			setTimeout(() => {
 				mainmenu[index].style.display = "block";
-
-				bio.style.display = "none";
+				mainmenu[index].style.opacity = "1";
+				mainmenu[index].style.visibility = "visible";
 			}, 500);
 		}
+		setTimeout(() => {
+			bio.style.visibility = "collapse";
+			contact.style.visibility = "collapse";
+			closebutton.style.visibility = "collapse";
+		}, 500);
 	}
 
 	if (location.hash == "#aboutme") {
 		for (let index = 0; index < mainmenu.length; index++) {
 			mainmenu[index].style.opacity = "0";
-			bio.style.opacity = "0";
-			setTimeout(() => {
-				mainmenu[index].style.display = "none";
-				bioflex.style.display = "flex";
-				bio.style.display = "block";
-				bio.style.opacity = "1";
-			}, 500);
 		}
+
+		bio.style.visibility = "visible";
+		closebutton.style.visibility = "visible";
+		setTimeout(() => {
+			for (let index = 0; index < mainmenu.length; index++) {
+				mainmenu[index].style.visibility = "collapse";
+			}
+			closebutton.style.opacity = "1";
+			bio.style.opacity = 1;
+		}, 500);
 	}
 
 	if (location.hash == "#contact") {
-		var mainmenu = document.getElementsByClassName("menuelement");
 		for (let index = 0; index < mainmenu.length; index++) {
-			mainmenu[index].style.opacity = "1";
+			mainmenu[index].style.opacity = "0";
 		}
+		contact.style.visibility = "visible";
+		closebutton.style.visibility = "visible";
+		setTimeout(() => {
+			for (let index = 0; index < mainmenu.length; index++) {
+				mainmenu[index].style.visibility = "collapse";
+			}
+			closebutton.style.opacity = "1";
+			contact.style.opacity = 1;
+		}, 500);
+	}
+
+	if (location.hash == "#coldness") {
 	}
 }
 
