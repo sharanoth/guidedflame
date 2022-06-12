@@ -23,6 +23,15 @@
 	src: url(fonts/OptimusPrincepsSemiBold.ttf);
 }
 
+.bio {
+	display: none;
+}
+
+.bio p {
+	font-family: DarkSoulsSB;
+	color: white;
+}
+
 .maindivbg {
 	background: url(https://steamuserimages-a.akamaihd.net/ugc/1761446532953187247/B713E72A4007E29A1D2B53919716E2BA9BF237BD/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true)
 		no-repeat;
@@ -35,9 +44,11 @@
 	transition: opacity 0.5s ease-in, filter 0.5s ease-in;
 	filter: blur(1.5px);
 	background-size: 420px;
+	z-index: -100;
 }
 
 .maindiv {
+	z-index: 15;
 	visibility: collapse;
 	width: 0;
 	opacity: 0;
@@ -47,23 +58,29 @@
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
-	transition: opacity 0.5s;
+	transition: opacity 0.5s ease-in;
 	font-weight: bold;
 }
 
-.maindiv label {
+.maindiv a {
 	font-size: 2.4em;
 	padding-bottom: 12px;
 	font-family: DarkSouls;
 	color: rgb(194, 194, 194);
-	transition: color 0.3s, filter 0.3s linear;
+	text-decoration: none;
+	transition: color 0.3s, filter 0.3s linear, opacity 0.5s ease-in;
 	user-select: none;
 	-moz-user-select: none;
 }
 
-.maindiv label:hover {
-	font-size: 2.4em;
-	padding-bottom: 12px;
+.maindiv .bio {
+	transition: opacity 0.5s ease-in !important;
+}
+.closebutton {
+	left: 50%;
+}
+
+.maindiv a:hover {
 	font-family: DarkSouls;
 	color: white;
 	filter: drop-shadow(0px 0px 3px whitesmoke);
@@ -86,7 +103,7 @@ body {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	transition: opacity 0.8s ease-in;
+	transition: opacity 0.5s ease-in;
 	z-index: 100;
 }
 
