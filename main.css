@@ -32,6 +32,7 @@
 	display: flex;
 	flex-direction: column;
 	width: fit-content;
+	width: -moz-max-content;
 	max-width: 500px;
 	padding-left: 24px;
 	padding-right: 24px;
@@ -144,14 +145,17 @@ body {
 	color: rgba(255, 255, 255, 1);
 	background-color: black;
 	height: fit-content;
+	height: -moz-max-content;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 	transition: background-color 0.5s ease-in;
 }
 
 .landingdiv {
 	position: absolute;
 	width: fit-content;
+	width: -moz-max-content;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);

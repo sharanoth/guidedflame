@@ -39,9 +39,9 @@ function navigation() {
 	var closebutton = document.getElementById("closebutton");
 	var maindiv = document.getElementById("maindiv");
 	var bio = document.getElementById("bio");
-	var contact = document.getElementById("contact");
+	var contact = document.getElementById("contactdiv");
 	var mainmenu = document.getElementsByClassName("menuelement");
-	var coldness = document.getElementById("coldness");
+	var coldness = document.getElementById("coldnessa");
 
 	if (location.hash == "#main") {
 		bio.style.opacity = "0";
