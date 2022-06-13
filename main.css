@@ -32,7 +32,7 @@
 	display: flex;
 	flex-direction: column;
 	width: fit-content;
-	width: -moz-max-content;
+	width: calc(100vw - 24px);
 	max-width: 500px;
 	padding-left: 24px;
 	padding-right: 24px;
@@ -155,7 +155,7 @@ body {
 .landingdiv {
 	position: absolute;
 	width: fit-content;
-	width: -moz-max-content;
+	width: calc(100vw - 24px);
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
