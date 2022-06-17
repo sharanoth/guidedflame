@@ -27,6 +27,9 @@
 	-webkit-tap-highlight-color: transparent !important;
 }
 
+html {
+	overflow: hidden;
+}
 .bio {
 	position: absolute;
 	display: flex;
@@ -43,6 +46,7 @@
 	opacity: 0;
 	visibility: collapse;
 	transition: opacity 0.5s ease-in;
+	align-items: center;
 }
 .bio ul {
 	display: flex;
@@ -76,7 +80,7 @@
 	opacity: 0.31;
 	transition: opacity 0.5s ease-in, filter 0.5s ease-in;
 	filter: blur(1.5px);
-	background-size: 164px;
+	background-size: calc(4vw + 9vh);
 	z-index: -100;
 }
 
@@ -145,6 +149,8 @@ body {
 	color: rgba(255, 255, 255, 1);
 	background-color: black;
 	height: fit-content;
+	width: fit-content;
+	width: -moz-max-content;
 	height: -moz-max-content;
 	margin: 0;
 	padding: 0;
