@@ -58,13 +58,10 @@ html {
 
 .bio div {
 	display: flex;
-	text-align: center;
+	text-align: left;
 	flex-direction: column;
 	font-family: Cinzel;
 	color: white;
-}
-
-.bio p {
 	max-width: 500px;
 }
 

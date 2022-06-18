@@ -50,13 +50,13 @@ function navigation() {
 		maindiv.style.display = "flex";
 
 		for (let index = 0; index < mainmenu.length; index++) {
-			setTimeout(() => {
+			setTimeout(function () {
 				mainmenu[index].style.display = "block";
 				mainmenu[index].style.opacity = "1";
 				mainmenu[index].style.visibility = "visible";
 			}, 500);
 		}
-		setTimeout(() => {
+		setTimeout(function () {
 			bio.style.visibility = "collapse";
 			contact.style.visibility = "collapse";
 			closebutton.style.visibility = "collapse";
@@ -69,7 +69,7 @@ function navigation() {
 
 		contact.style.visibility = "visible";
 		closebutton.style.visibility = "visible";
-		setTimeout(() => {
+		setTimeout(function () {
 			for (let index = 0; index < mainmenu.length; index++) {
 				mainmenu[index].style.visibility = "collapse";
 			}
@@ -86,7 +86,7 @@ function navigation() {
 
 		bio.style.visibility = "visible";
 		closebutton.style.visibility = "visible";
-		setTimeout(() => {
+		setTimeout(function () {
 			for (let index = 0; index < mainmenu.length; index++) {
 				mainmenu[index].style.visibility = "collapse";
 			}
