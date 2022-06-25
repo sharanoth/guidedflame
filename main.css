@@ -32,10 +32,8 @@ html {
 }
 .bio {
 	position: absolute;
-	display: flex;
-	flex-direction: column;
-	width: fit-content;
-	width: calc(100vw - 24px);
+	display: grid;
+	width: 100vw;
 	max-width: 500px;
 	padding-left: 24px;
 	padding-right: 24px;
@@ -46,7 +44,18 @@ html {
 	opacity: 0;
 	visibility: collapse;
 	transition: opacity 0.5s ease-in;
+	grid-template-areas:
+		"a . b"
+		"a c b"
+		"a . b";
+	gap: 0.5em;
+}
+
+.bioname {
+	display: flex !important;
+	justify-content: center;
 	align-items: center;
+	grid-area: c;
 }
 .bio ul {
 	display: flex;
@@ -57,12 +66,9 @@ html {
 }
 
 .bio div {
-	display: flex;
-	text-align: left;
-	flex-direction: column;
+	display: block;
 	font-family: Cinzel;
 	color: white;
-	max-width: 500px;
 }
 
 .maindivbg {
